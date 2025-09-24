@@ -1,0 +1,114 @@
+## ----------------USER TESZTEK----------------
+##ÁCSNORBERT
+### GET route
+
+GET http://localhost:3000
+Content-Type: application/json
+
+### GET összes user
+
+GET http://localhost:3000/users
+Content-Type: application/json
+
+### GET user id alapján
+##ÁCSNORBERT
+GET http://localhost:3000/users/1
+Content-Type: application/json
+
+### POST user 
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{  
+    "name": "TesztNev", 
+    "email": "teszt@teszt.com", 
+    "password": "ASDfgh123" 
+}
+
+### DELETE user id alapján
+
+DELETE  http://localhost:3000/users/1
+Content-Type: application/json
+
+
+### POST login
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "teszt@teszt.hu",
+    "password": "Ab123456a"
+}
+
+
+
+## ----------------IDŐJÁRÁS TESZTEK----------------
+
+##ÁCSNORBERT
+### GET összes időjárás
+
+GET http://localhost:3000/idojaras/
+Content-Type: application/json
+
+
+### GET összes időjárás adat id alapján
+
+GET http://localhost:3000/idojaras/users/1
+Content-Type: application/json
+
+### GET egy időjárás id alapján
+
+GET http://localhost:3000/idojaras/6
+Content-Type: application/json
+
+### POST új időjárás adat
+
+POST http://localhost:3000/idojaras/
+Content-Type: application/json
+
+{
+    {
+  "id": 1,
+  "userId": 2,
+  "date": "2025-09-24",
+  "minFok": 12,
+  "maxFok": 23,
+  "idojarasAdat": "sunny"
+}
+
+}
+
+### UPDATE időjárás id alapján
+
+PATCH  http://localhost:3000/idojaras/6
+Content-Type: application/json
+
+{
+    {
+  "id": 1,
+  "userId": 2,
+  "date": "2025-09-24",
+  "minFok": 12,
+  "maxFok": 23,
+  "idojarasAdat": "sunny"
+}
+
+}
+
+### DELETE időjárás id alapján
+
+DELETE http://localhost:3000/idojaras/1
+Content-Type: application/json
+
+### DELETE felhasználó összes időjárás adata id alapján
+
+DELETE http://localhost:3000/idojaras/users/2
+Content-Type: application/json
+
+### DELETE összes időjárás adat törlése az összes felhasználónál
+
+DELETE http://localhost:3000/idojaras
+Content-Type: application/json
+##ÁCSNORBERT
